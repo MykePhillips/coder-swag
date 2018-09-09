@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE8CB71521454DA600A60231 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8CB71421454DA600A60231 /* Category.swift */; };
+		BE8CB71821454F4000A60231 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8CB71721454F4000A60231 /* DataService.swift */; };
 		BEB0F8632143264A00E18AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB0F8622143264A00E18AB7 /* AppDelegate.swift */; };
 		BEB0F8652143264A00E18AB7 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB0F8642143264A00E18AB7 /* CategoriesVC.swift */; };
 		BEB0F8682143264A00E18AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB0F8662143264A00E18AB7 /* Main.storyboard */; };
 		BEB0F86A2143265200E18AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB0F8692143265200E18AB7 /* Assets.xcassets */; };
 		BEB0F86D2143265200E18AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB0F86B2143265200E18AB7 /* LaunchScreen.storyboard */; };
+		BEB0F87821446F7500E18AB7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB0F87721446F7500E18AB7 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE8CB71421454DA600A60231 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BE8CB71721454F4000A60231 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BEB0F85F2143264A00E18AB7 /* Coder-Swag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coder-Swag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB0F8622143264A00E18AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEB0F8642143264A00E18AB7 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		BEB0F8692143265200E18AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEB0F86C2143265200E18AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEB0F86E2143265200E18AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB0F87721446F7500E18AB7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE8CB71621454F2000A60231 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BE8CB71721454F4000A60231 /* DataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		BEB0F8562143264A00E18AB7 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +68,41 @@
 		BEB0F8612143264A00E18AB7 /* Coder-Swag */ = {
 			isa = PBXGroup;
 			children = (
+				BE8CB71621454F2000A60231 /* Service */,
+				BEB0F87621446F1600E18AB7 /* View */,
+				BEB0F87521446F1000E18AB7 /* Model */,
+				BEB0F87421446EFE00E18AB7 /* Controller */,
 				BEB0F8622143264A00E18AB7 /* AppDelegate.swift */,
-				BEB0F8642143264A00E18AB7 /* CategoriesVC.swift */,
-				BEB0F8662143264A00E18AB7 /* Main.storyboard */,
 				BEB0F8692143265200E18AB7 /* Assets.xcassets */,
 				BEB0F86B2143265200E18AB7 /* LaunchScreen.storyboard */,
 				BEB0F86E2143265200E18AB7 /* Info.plist */,
 			);
 			path = "Coder-Swag";
+			sourceTree = "<group>";
+		};
+		BEB0F87421446EFE00E18AB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEB0F8642143264A00E18AB7 /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BEB0F87521446F1000E18AB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE8CB71421454DA600A60231 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEB0F87621446F1600E18AB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEB0F8662143264A00E18AB7 /* Main.storyboard */,
+				BEB0F87721446F7500E18AB7 /* CategoryCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +178,9 @@
 			files = (
 				BEB0F8652143264A00E18AB7 /* CategoriesVC.swift in Sources */,
 				BEB0F8632143264A00E18AB7 /* AppDelegate.swift in Sources */,
+				BEB0F87821446F7500E18AB7 /* CategoryCell.swift in Sources */,
+				BE8CB71521454DA600A60231 /* Category.swift in Sources */,
+				BE8CB71821454F4000A60231 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -283,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A546TGD46;
 				INFOPLIST_FILE = "Coder-Swag/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A546TGD46;
 				INFOPLIST_FILE = "Coder-Swag/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
