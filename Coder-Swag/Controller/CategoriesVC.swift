@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoriesVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
+class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
 
@@ -21,6 +21,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
 
 
     }
+
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
@@ -42,6 +43,35 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
         }
 
     }
+
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+
+        performSegue(withIdentifier: "ProductsVC", sender: category)
+    }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productVC = segue.destination as? ProductsVC {
+            let barButton = UIBarButtonItem()
+            barButton.title = ""
+            navigationItem.backBarButtonItem = barButton
+            assert(sender as? Category != nil)
+            productVC.initProducts(category: sender as! Category)
+
+
+
+
+
+        }
+    }
+
 }
+
+
+
+
+
 
 
